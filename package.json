@@ -2,9 +2,10 @@
   "name": "eventman",
   "version": "1.0.0",
   "description": "a simple events management api",
-  "main": "index.js",
+  "main": "src/server.js",
   "scripts": {
-    "test": "npm test"
+    "test": "npm test",
+    "run": "nodemon run"
   },
   "repository": {
     "type": "git",
