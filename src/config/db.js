@@ -9,10 +9,10 @@ dns.setDefaultResultOrder('ipv4first');
 const sequelize = new Sequelize({
   dialect: "postgres",
   host: process.env.DATABASE_URL,
-  username: "postgres",
+  username: process.env.USR,
   password: process.env.PASSWD,
   database: "postgres",
-  port: 5432,
+  port: 6543,
   logging: false,
 });
 
