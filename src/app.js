@@ -2,6 +2,11 @@ import express from "express";
 import morgan from "morgan";
 import cors from "cors";
 import dotenv from "dotenv";
+
+import authRoutes from "./routes/authRoutes.js";
+import eventRoutes from "./routes/eventRoutes.js";
+import rsvpRoutes from "./routes/rsvpRoutes.js";
+
 dotenv.config();
 
 const app = express();
@@ -15,6 +20,11 @@ app.use(morgan("dev"));
 app.get("/", (req, res) => {
   res.json({ message: "Welcome to the eventman API" });
 });
+
+// Base routes
+app.use("/api/auth", authRoutes);
+app.use("/api/events", eventRoutes);
+app.use("/api/rsvps", rsvpRoutes);
 
 // Error handling
 app.use((err, req, res, next) => {
