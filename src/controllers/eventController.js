@@ -1,4 +1,4 @@
-import Event from "../models/Event.js";
+import Event from "../models/events.model.js";
 import { Op } from "sequelize";
 
 // Create event (organizer only)
