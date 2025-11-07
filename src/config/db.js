@@ -1,6 +1,10 @@
 import { Sequelize } from "sequelize";
 import dotenv from "dotenv";
+import dns from 'dns';
+
 dotenv.config();
+
+dns.setDefaultResultOrder('ipv4first');
 
 const sequelize = new Sequelize({
   dialect: "postgres",
