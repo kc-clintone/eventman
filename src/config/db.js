@@ -4,9 +4,9 @@ dotenv.config();
 
 const sequelize = new Sequelize({
   dialect: "postgres",
-  host: "db.zgstfiwkebxglynulwsm.supabase.co",
+  host: process.env.DATABASE_URL,
   username: "postgres",
-  password: "bkhqC7fe7?&3LMu",
+  password: process.env.PASSWD,
   database: "postgres",
   port: 5432,
   logging: false,
