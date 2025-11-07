@@ -2,6 +2,7 @@
   "name": "eventman",
   "version": "1.0.0",
   "description": "a simple events management api",
+  "type": "module",
   "main": "src/server.js",
   "scripts": {
     "test": "npm test",
