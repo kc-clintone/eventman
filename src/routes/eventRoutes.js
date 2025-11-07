@@ -1,4 +1,13 @@
 import express from "express";
+import {
+  createEvent,
+  getEvents,
+  getEventById,
+  updateEvent,
+  deleteEvent
+} from "../controllers/eventController.js";
+
+import { protect, organizerOnly } from "../middleware/authMiddleware.js";
 
 const router = express.Router();
 
