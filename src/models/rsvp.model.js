@@ -7,8 +7,8 @@ const RSVP = sequelize.define("RSVP", {
   status: { type: DataTypes.ENUM("pending", "approved"), defaultValue: "pending" },
 });
 
-User.belongsToMany(Event, { through: RSVP });
-Event.belongsToMany(User, { through: RSVP });
+User.belongsToMany(Event, { through: RSVP, foreignKey: "userId" });
+Event.belongsToMany(User, { through: RSVP, foreignKey: "eventId" });
 
 export default RSVP;
 
