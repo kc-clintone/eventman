@@ -123,9 +123,9 @@ src/
 ├── middleware/
 │   └── authMiddleware.js
 ├── models/
-│   ├── User.js
-│   ├── Event.js
-│   └── RSVP.js
+│   ├── user.model.js
+│   ├── events.model.js
+│   └── rsvp.model.js
 ├── routes/
 │   ├── authRoutes.js
 │   ├── eventRoutes.js
