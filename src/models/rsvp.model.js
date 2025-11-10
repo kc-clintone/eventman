@@ -2,8 +2,14 @@ import { DataTypes } from "sequelize";
 import sequelize from "../config/db.js";
 import User from "./user.model.js";
 import Event from "./events.model.js";
+import {nanoid} from 'nanoid';
 
 const RSVP = sequelize.define("RSVP", {
+    id: {
+    type: DataTypes.UUID,
+    defaultValue: () => nanoid(8),
+    primaryKey: true,
+  },
   status: { type: DataTypes.ENUM("pending", "approved"), defaultValue: "pending" },
 });
 
