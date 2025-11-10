@@ -1,12 +1,12 @@
 import { DataTypes } from "sequelize";
 import sequelize from "../config/db.js";
 import User from "./user.model.js";
-import {nanoid} from 'nanoid';
+import { v4 as uuidv4 } from "uuid";
 
 const Event = sequelize.define("Event", {
   id: {
     type: DataTypes.UUID,
-    defaultValue: () => nanoid(8),
+    defaultValue: () => uuidv4(),
     primaryKey: true,
   },
   title: { type: DataTypes.STRING, allowNull: false },
